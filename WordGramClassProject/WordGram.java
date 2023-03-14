@@ -2,6 +2,18 @@
 public class WordGram {
     private String[] myWords;
     private int myHash;
+    
+    public static void main(String[] args) {
+    	String st = "this is a test this is a test this is a test of words";
+    	String[] words = st.split("\\s+");
+    	WordGram key = new WordGram(words, 3,3); 
+    	System.out.println(key.toString());
+    }
+    
+    public int hashCode() {
+    	myHash = this.toString().hashCode();
+    	return this.toString().hashCode();
+    }
 
     public WordGram(String[] source, int start, int size) {
         myWords = new String[size];
